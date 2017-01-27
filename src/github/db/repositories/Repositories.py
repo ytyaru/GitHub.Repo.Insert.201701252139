@@ -42,9 +42,9 @@ class Repositories:
         res = None
         if since is None:
             res = self.page.pagenate(r, r.json())
-            res.reverse()
         else:
             res = self.__pagenate(r, r.json(), since)
+        res.reverse()
         return res
 
     """
